@@ -1,0 +1,40 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{parskip}
+\usepackage{setspace}
+\pagenumbering{gobble}
+\setstretch{1.1}
+
+\begin{document}
+
+\begin{center}
+\Large\textbf{Statement of Purpose}\\[4pt]
+\normalsize Benedikt Samwer\quad|\quad PhD Applicant, Biomedical Informatics \quad|\quad Harvard University
+\end{center}
+
+I would like to pursue the Biomedical Informatics PhD with the Artificial Intelligence in Medicine (AIM) track to develop methods and systems that make early disease detection and clinical decision support reliable in real world populations. Working on CT based early pancreatic cancer detection has shown me both the promise of deep learning and how quickly performance can degrade when a model leaves a curated cohort. To work on these problems at the intersection of methodology, imaging, and clinical translation, I am applying to the AIM track at Harvard.
+
+I have been deliberate in building a quantitative foundation and testing whether research fits me long term. During my BSc in Engineering Science at the Technical University of Munich I built a broad base in applied mathematics, data analysis, numerical simulation, algorithms, control systems, and statistics. For my bachelor thesis at the Research and Consulting Center for Energy Economics (FfE) I did applied research simulation and optimization models for district heating networks and storage systems, formulating and solving large constrained optimization problems and working with municipal planners on realistic objectives and constraints. In parallel I enrolled in Medicine at LMU for one year to understand how clinicians reason about disease, imaging, and risk. That experience, together with early exposure to clinical environments, convinced me that my strengths lie in designing methods for quantitative biomedical problems rather than practicing medicine.
+
+I have now completed an MSc in Applied Computational Science and Engineering at Imperial College London with Distinction. Coursework in machine learning, numerical optimization, probabilistic modeling, high performance computing, and scientific computing prepared me for the computational rigor of AIM. Across both degrees I have sought out projects where I am responsible for the full pipeline from data handling and modeling to evaluation and communication, rather than isolated algorithmic components. These experiences have made me comfortable owning complex technical work, but also iterating and communicating in multidisciplinary teams.
+
+
+
+My most formative research has been with Prof Michael Rosenthal at Dana Farber Cancer Institute and Harvard Medical School, carried out as my MSc thesis through a research internship in his lab. Together we evaluated deep learning and population referenced radiomics for early pancreatic cancer detection on CT. On the radiomics side I worked with age and sex stratified population normalizations derived from tens of thousands of CT scans and compared them to standard case control scaling in matched early cancer cohorts. Using logistic regression, SVMs, and tree based models, I quantified how population based normalization changes feature geometry and improves linear models in realistic low prevalence backgrounds. On the deep learning side I implemented a pancreas centered 3D ResNet pipeline from scratch, taking inspiration from a published pre diagnostic pancreatic cancer paper (Korfiatis et al, 2023), and trained it on diagnostic scans with matched population controls before evaluating it on both diagnostic and pre diagnostic scans across cohorts. This required nnU Net based pancreas segmentation, volumetric data augmentation, and reproducible experiments in Python and PyTorch, wrapped in Docker with basic CI. We then applied the same architecture and radiomics pipelines under both the original single cohort design with younger unmatched controls and an age and sex matched design, and quantified how much of the apparent performance was driven by study design rather than true signal. We are currently preparing two manuscripts from this work, one on population referenced radiomics and one on pancreas centered 3D CNN models evaluated under realistic study designs, which we plan to submit in the coming months.
+
+
+
+Beyond imaging, I have explored other areas of AI in medicine that broaden my view of clinical data and deployment. I built an LLM based outpatient billing assistant that extracts ICD and EBM codes from doctors’ notes and automates quarterly billing exports, with a simple clinician facing interface. In a transcriptomic response project I used ChemBERTa style embeddings and a variational autoencoder to predict gene expression shifts from compound SMILES and concentrations with uncertainty aware outputs. These projects strengthened my foundations in transformers, sequence modeling, and uncertainty, and showed me how similar methodological issues arise when models are deployed on messy, shifting data.
+
+
+During the PhD I want to focus on robust, clinically meaningful AI for early disease detection and risk prediction. Methodologically I am interested in three areas. First, how to design normalization, representation learning, and evaluation schemes so that models remain reliable across institutions, scanners, demographics, and prevalence, not only within one cohort. Second, how to combine imaging with longitudinal clinical and metabolic data to build multimodal risk models, for example in pancreatic cancer where morphological changes, muscle and fat loss, and diabetes interact. Third, how to build calibrated models and decision support tools that operate at very high specificity, as required for screening, while retaining useful sensitivity. I also want to deepen my understanding of pathophysiology relevant to imaging and biomarkers through coursework and close collaboration with clinicians.
+
+Harvard’s AIM track is the right environment for this work. The program is designed for students from quantitative fields who want to solve problems in biomedicine and clinical care, which matches my training and ambitions. My time at Dana Farber has already shown me the strengths of the Longwood ecosystem, including access to large scale clinical data, deep radiology and oncology expertise, and strong methodological groups. I am particularly interested in working with AIM faculty focused on early cancer detection, medical imaging AI, and translational model evaluation in collaboration with DFCI and Brigham. In return I bring a solid background in machine learning and optimization, hands on experience with large CT cohorts and clinical workflows, and a clear interest in evaluation design and distributional robustness.
+
+In the long term I hope to lead research at the interface of machine learning and clinical trials in an academic or academic hospital setting, developing methods and studies that bring AI tools into practice in a rigorous and reproducible way. The AIM Ph.D. program would allow me to deepen my methodological expertise, broaden my knowledge of clinical issues, and contribute to AI systems that enhance patient outcomes in real-world settings.
+
+\end{document}
+
+% Working closely with clinicians at Dana Farber I also built calibration curves, stakeholder ready visualizations, and short briefs that translated model outputs into risk estimates radiologists and oncologists could interpret. This experience sharpened my interest in distribution shift, calibration, and evaluation design as primary research questions in AI for healthcare, and taught me to communicate uncertainty and limitations clearly.
+

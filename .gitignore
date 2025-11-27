@@ -1,0 +1,25 @@
+# LaTeX build artifacts
+build/
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+
+# PDF output (optional - uncomment if you don't want to track PDFs)
+# *.pdf
+
+# Editor files
+.DS_Store
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
